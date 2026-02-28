@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Zayd Billah</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <span class="logo-icon">&#9670;</span>
+        <span class="logo-text">ydStudio</span>
+      </div>
+
+      <ul class="navbar__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar__cta">
+        <a href="#contact" class="btn-primary">Hire Me</a>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <img src="profile.jpg" alt="Zayd Billah" class="profile-img" />
+
+        <span class="hero__badge">Available for work</span>
+        <h1 class="hero__title">
+          Hi, saya
+          <span class="highlight">Zayd Billah</span>
+          <br />
+          Junior Web Developer
+        </h1>
+        <p class="hero__desc">
+          Saya sedang belajar membangun website yang cepat, responsif, dan terlihat profesional.
+          Sebagai junior web developer, saya ingin terus berkembang dan membuat proyek yang semakin
+          baik ke depannya.
+        </p>
+        <div class="hero__actions">
+          <a href="#about" class="btn-primary">Lihat Keahlian</a>
+          <a href="#contact" class="btn-outline">Hubungi Saya</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="about">
+      <div class="container">
+        <h2 class="section-title">Keahlian Saya</h2>
+        <p class="section-subtitle">Teknologi dan skill yang saya kuasai</p>
+
+        <div class="skills__grid">
+          <div class="skill-card">
+            <div class="skill-card__icon">&#128195;</div>
+            <h3>HTML5</h3>
+            <p>Semantic markup, aksesibilitas, dan struktur dokumen yang baik.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#127912;</div>
+            <h3>CSS3</h3>
+            <p>Flexbox, Grid, animasi, dan responsive design untuk semua layar.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#128279;</div>
+            <h3>Git & GitHub</h3>
+            <p>Version control, branching, dan kolaborasi tim secara profesional.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#128640;</div>
+            <h3>Performance</h3>
+            <p>Optimasi loading, image compression, dan Core Web Vitals.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#128248;</div>
+            <h3>Photography</h3>
+            <p>
+              Mengambil foto produk, potret, dan event dengan komposisi, pencahayaan, dan editing
+              yang rapi.
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#127909;</div>
+            <h3>Videography</h3>
+            <p>
+              Merekam video untuk event, konten sosial media, dan cinematic dengan teknik
+              pengambilan gambar yang stabil.
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#127916;</div>
+            <h3>Video Editing</h3>
+            <p>
+              Mengedit video menggunakan software editing untuk menghasilkan konten yang rapi,
+              smooth, dan enak ditonton.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="title">Contact Me</h2>
+      <div class="card contact-card">
+        <form action="mailto:emailkau@gmail.com" method="POST" enctype="text/plain">
+          <input type="text" name="Nama" placeholder="Nama" required />
+          <input type="email" name="Email" placeholder="Email" required />
+          <textarea name="Pesan" placeholder="Pesan" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div class="social-contact">
+          <p>Atau hubungi saya melalui:</p>
+          <div class="social-buttons">
+            <a href="https://www.instagram.com/yd.acco" target="_blank" class="ig-btn">
+              <i class="fab fa-instagram"></i>
+              Instagram
+            </a>
+            <a href="https://wa.me/6285836028252" target="_blank" class="wa-btn">
+              <i class="fab fa-whatsapp"></i>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <span class="footer__brand">&#9670; ydStudio</span>
+          <p class="footer__copy">&copy; 2026 Zayd Billah. Dibuat dengan HTML & CSS murni.</p>
+          <div class="footer__links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

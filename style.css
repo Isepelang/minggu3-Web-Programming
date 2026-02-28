@@ -1,0 +1,481 @@
+/* ── RESET & BASE ───────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Font bawaan Apple / Inter */
+body {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'SF Pro Display',
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #101820;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── NAVBAR ────────────────────────────── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar__logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #101820;
+}
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  font-weight: 600;
+}
+.navbar__links a:hover {
+  color: #f2aa4c;
+}
+
+/* ── BUTTONS ──────────────────────────────── */
+.btn-primary {
+  background-color: #f2aa4c;
+  color: #101820;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  display: inline-block;
+  border: 2px solid #f2aa4c;
+}
+.btn-primary:hover {
+  background-color: #d9963e;
+  border-color: #d9963e;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid #f2aa4c;
+  color: #f2aa4c;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-outline:hover {
+  background-color: #f2aa4c;
+  color: #101820;
+}
+
+/* Paksa semua tombol lain pake font Inter */
+.btn,
+.ig-btn,
+.wa-btn {
+  font-family: inherit;
+}
+
+/* ── HERO SECTION ───────────────────────────── */
+.hero {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(135deg, #101820, #1c2733, #0b1117);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+}
+
+.hero__content {
+  max-width: 640px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 40px;
+  border: 4px solid #f2aa4c;
+  box-shadow: 0 0 25px rgba(242, 170, 76, 0.4);
+  display: block;
+}
+
+.hero__badge {
+  display: inline-block;
+  background-color: rgba(242, 170, 76, 0.15);
+  color: #f2aa4c;
+  border: 1px solid #f2aa4c;
+  padding: 4px 16px;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.highlight {
+  color: #f2aa4c;
+}
+.hero__desc {
+  color: #cccccc;
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+}
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── UTILITY ────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #101820;
+  margin-bottom: 12px;
+}
+.section-subtitle {
+  text-align: center;
+  color: #666666;
+  margin-bottom: 56px;
+}
+
+/* ── SKILLS & PORTFOLIO ─────────────────────── */
+.skills,
+.portfolio {
+  padding: 96px 0;
+  background-color: #f8f9fa;
+}
+.portfolio {
+  background-color: #ffffff;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* EFEK GLASSMORPHISM & GLOW */
+.skill-card,
+.portfolio-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.skill-card {
+  padding: 32px 24px;
+}
+
+.skill-card:hover,
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(242, 170, 76, 0.2);
+  border-color: rgba(242, 170, 76, 0.5);
+}
+
+.skill-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+.skill-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #101820;
+  margin-bottom: 8px;
+}
+.skill-card p {
+  color: #666666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #e8e8e8;
+}
+.portfolio-info {
+  padding: 24px;
+}
+.portfolio-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #101820;
+}
+.portfolio-info p {
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+/* ── CONTACT SECTION ────────────────────────── */
+#contact {
+  padding: 96px 20px;
+  background-color: #101820;
+  text-align: center;
+}
+
+#contact .title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #f2aa4c;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(242, 170, 76, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #101820;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  border-color: #f2aa4c;
+  box-shadow: 0 0 15px rgba(242, 170, 76, 0.3);
+  background-color: #ffffff;
+}
+
+.contact-card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-card .btn {
+  background-color: #f2aa4c;
+  color: #101820;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.contact-card .btn:hover {
+  background-color: #e59a3c;
+  transform: translateY(-2px);
+}
+
+/* ── CONTACT SECTION BUTTONS ───────────────── */
+.social-contact {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+}
+.social-contact p {
+  margin-bottom: 16px;
+  color: #cccccc;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Tombol IG */
+.ig-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.ig-btn:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+/* Tombol WhatsApp Asli Warnanya */
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.wa-btn:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+/* ── FOOTER ─────────────────────────────────── */
+.footer {
+  background-color: #0b1117;
+  padding: 32px 0;
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer__brand {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.footer__copy {
+  color: #888888;
+  font-size: 0.85rem;
+}
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+.footer__links a {
+  color: #888888;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.footer__links a:hover {
+  color: #f2aa4c;
+}
+
+/* ── RESPONSIVE DESIGN (Biar Gak Rusak di HP) ── */
+@media (max-width: 1023px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero__title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+  .navbar__links {
+    display: none;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__desc {
+    font-size: 1rem;
+  }
+  .skills__grid,
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .skills,
+  .portfolio {
+    padding: 64px 0;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -11,12 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,13 +23,11 @@
         <span class="logo-icon">&#9670;</span>
         <span class="logo-text">ydStudio</span>
       </div>
-
       <ul class="navbar__links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
       <div class="navbar__cta">
         <a href="#contact" class="btn-primary">Hire Me</a>
       </div>
@@ -40,7 +36,6 @@
     <section class="hero" id="home">
       <div class="hero__content">
         <img src="profile.jpg" alt="Zayd Billah" class="profile-img" />
-
         <span class="hero__badge">Available for work</span>
         <h1 class="hero__title">
           Hi, saya
@@ -49,9 +44,9 @@
           Junior Web Developer
         </h1>
         <p class="hero__desc">
-          Saya sedang belajar membangun website yang cepat, responsif, dan terlihat profesional.
-          Sebagai junior web developer, saya ingin terus berkembang dan membuat proyek yang semakin
-          baik ke depannya.
+          Seorang Mahasiswa UMSU yang sedang belajar membangun website yang cepat, responsif, dan
+          terlihat profesional. Sebagai junior web developer, saya ingin terus berkembang dan
+          membuat proyek yang semakin baik ke depannya.
         </p>
         <div class="hero__actions">
           <a href="#about" class="btn-primary">Lihat Keahlian</a>
@@ -65,6 +60,7 @@
         <h2 class="section-title">Keahlian Saya</h2>
         <p class="section-subtitle">Teknologi dan skill yang saya kuasai</p>
 
+        <h3 class="skills-category">&#128187; Web Development</h3>
         <div class="skills__grid">
           <div class="skill-card">
             <div class="skill-card__icon">&#128195;</div>
@@ -87,55 +83,55 @@
             <p>Optimasi loading, image compression, dan Core Web Vitals.</p>
           </div>
           <div class="skill-card">
-            <div class="skill-card__icon">&#128248;</div>
-            <h3>Photography</h3>
-            <p>
-              Mengambil foto produk, potret, dan event dengan komposisi, pencahayaan, dan editing
-              yang rapi.
-            </p>
+            <div class="skill-card__icon">&#128013;</div>
+            <h3>Python</h3>
+            <p>Pemrograman backend, data analysis, dan scripting yang efisien.</p>
           </div>
-          <div class="skill-card">
-            <div class="skill-card__icon">&#127909;</div>
-            <h3>Videography</h3>
-            <p>
-              Merekam video untuk event, konten sosial media, dan cinematic dengan teknik
-              pengambilan gambar yang stabil.
-            </p>
+        </div>
+
+        <h3 class="skills-category mt-4">&#127916; Editing & Multimedia</h3>
+        <div class="progress-container">
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>Photography</span>
+              <span>75%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill fill-75"></div>
+            </div>
           </div>
-          <div class="skill-card">
-            <div class="skill-card__icon">&#127916;</div>
-            <h3>Video Editing</h3>
-            <p>
-              Mengedit video menggunakan software editing untuk menghasilkan konten yang rapi,
-              smooth, dan enak ditonton.
-            </p>
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>Videography</span>
+              <span>75%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill fill-75"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>Video Editing</span>
+              <span>80%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill fill-80"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section">
-      <h2 class="title">Contact Me</h2>
-      <div class="card contact-card">
-        <form action="mailto:emailkau@gmail.com" method="POST" enctype="text/plain">
-          <input type="text" name="Nama" placeholder="Nama" required />
-          <input type="email" name="Email" placeholder="Email" required />
-          <textarea name="Pesan" placeholder="Pesan" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-
-        <div class="social-contact">
-          <p>Atau hubungi saya melalui:</p>
-          <div class="social-buttons">
-            <a href="https://www.instagram.com/yd.acco" target="_blank" class="ig-btn">
-              <i class="fab fa-instagram"></i>
-              Instagram
-            </a>
-            <a href="https://wa.me/6285836028252" target="_blank" class="wa-btn">
-              <i class="fab fa-whatsapp"></i>
-              WhatsApp
-            </a>
-          </div>
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="card contact-card">
+          <form action="mailto:emailkau@gmail.com" method="POST" enctype="text/plain">
+            <input type="text" name="Nama" placeholder="Nama" required />
+            <input type="email" name="Email" placeholder="Email" required />
+            <textarea name="Pesan" placeholder="Pesan" required></textarea>
+            <button type="submit" class="btn">Kirim Pesan</button>
+          </form>
         </div>
       </div>
     </section>
